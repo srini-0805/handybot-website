@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Handy-bot.ai - The Future of Cleaning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* 1. GLOBAL STYLES */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #333;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #6f32be;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    /* 2. HERO SECTION */
+    .hero {
+      background: linear-gradient(45deg, #333, #6f32be);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* 3. "WHAT" SECTION */
+    .what-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .what-text, .what-image {
+      flex: 1;
+      min-width: 280px;
+    }
+    .what-image img {
+      max-width: 100%;
+    }
+
+    /* 4. "WHO" SECTION (ICON GRID) */
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .icon-item {
+      background: #fafafa;
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    .icon-item:hover {
+      background: #f0f0ff;
+    }
+
+    /* 5. PRICING / PREBOOK */
+    .pricing {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .pricing h2 {
+      margin-bottom: 0.5em;
+    }
+    .pricing p {
+      margin-bottom: 0.5em;
+    }
+
+    /* 6. ABOUT US */
+    .about {
+      background: #ffffff;
+      padding: 60px 20px;
+    }
+
+    /* 7. FOOTER */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+
+    /* MEDIA QUERIES for responsiveness */
+    @media (max-width: 768px) {
+      .what-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Handybot</h1>
+    <p>The Future of Autonomous Cleaning – Say Hello to Handy.</p>
+    <a href="#prebook" class="btn">Prebook Now (20% Off)</a>
+  </section>
+
+  <!-- WHAT SECTION -->
+  <section id="what">
+    <h2> Robot for detailing cars </h2>
+    <div class="what-container">
+      <div class="what-text">
+        <p><strong>Handy 1 (Ships August 2025):</strong> Vacuums, blows, and wipes car interiors. </p>
+        <p><strong>Handy 2 (Ships August 2026):</strong> Picks trash, shampoos, and extracts. </p>
+        <p> A cobot arm on a moving base. AI trained to detail cars. </p>
+        <p> Seats, mats, cupholders, crevices, dashboard, trunk, and more. </p>
+        <p> Works with existing vacuum hoses and cleaning tools. </p>
+      </div>
+      <div class="what-image">
+        <img src="handy_car_wash.jpeg" alt="Handybot working in a car care center">
+      </div>
+    </div>
+  </section>
+  
+  <!-- ADDITIONAL IMAGE SECTION -->
+  <section id="handy-inside" style="text-align: center;">
+    <img src="handy_car_wash3.jpeg" alt="Handybot inside the car cabin" style="max-width: 100%; border-radius: 10px; margin-top: 40px;" />
+    <p style="margin-top: 15px; font-style: italic;">Inside view: Handy can clean a car's interiors within 10 mins </p>
+  </section>
+  
+
+  <!-- WHO SECTION -->
+  <section id="who">
+    <h2>Who Should Hire a Handy?</h2>
+    <p>Perfect for businesses dealing with large volumes of vehicle cleaning:</p>
+    <div class="icon-grid">
+      <div class="icon-item">
+        <h4>Car Wash Centers</h4>
+      </div>
+      <div class="icon-item">
+        <h4>Car Rental Companies</h4>
+      </div>
+      <div class="icon-item">
+        <h4>Fleet Operators</h4>
+      </div>
+      <div class="icon-item">
+        <h4>Robotaxi Companies</h4>
+      </div>
+      <div class="icon-item">
+        <h4>Cleaning Contractors</h4>
+      </div>
+      <div class="icon-item">
+        <h4>EV Service Hubs</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING & PREBOOK -->
+  <section class="pricing" id="prebook">
+    <h2>Hire a Handybot</h2>
+    <p><strong>$3000 per month</strong> – First bots shipping this August.</p>
+    <p>Prebook now to get a <strong>20% discount!</strong></p>
+    <a href="mailto:info@handy-bot.ai" class="btn">Reserve Yours</a>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We are a Robotics and AI team based in San Francisco, building a platform to train physical AI models to learn and perfect cleaning tasks (vacuum, wipe, blow, extract). Our end vision is a general-purpose cleaning robot for all environments. Starting with car cabin spaces, we aim to address the high-frequency tasks in the fleet and car wash industries with worker shortages.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Handy-bot.ai</p>
+    <p>
+      <a href="mailto:info@handy-bot.ai">Contact Us</a> |
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a>
+    </p>
+  </footer>
+</body>
+</html>
