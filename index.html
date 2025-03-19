@@ -58,18 +58,40 @@
     }
 
     /* 3. "WHAT" SECTION */
+    #what {
+      text-align: center; /* Center the heading and overall content */
+    }
+    #what h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
     .what-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
+      gap: 40px;
+      align-items: flex-start; /* Keeps text at top if image is taller */
+      justify-content: center; /* Centers the container */
+      margin-top: 30px;
     }
     .what-text, .what-image {
       flex: 1;
       min-width: 280px;
+      max-width: 550px; /* Give a max width so the text doesn't stretch too far */
+    }
+    .what-text {
+      text-align: left; /* Text is more readable left-aligned */
     }
     .what-image img {
       max-width: 100%;
+      border-radius: 10px; /* Slight rounding for a smoother look */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+    }
+
+    /* Additional text styling for bullet points (optional) */
+    .feature-list ul {
+      margin-top: 1em;
+      padding-left: 1.2em; /* Indent bullet points */
     }
 
     /* 4. "WHO" SECTION (ICON GRID) */
@@ -126,8 +148,20 @@
     @media (max-width: 768px) {
       .what-container {
         flex-direction: column;
+        text-align: center; /* Everything centers nicely on smaller screens */
+      }
+      .what-text {
         text-align: center;
       }
+    }
+
+    /* --- Image in the "inside view" section: reduce max width --- */
+    #handy-inside img {
+      max-width: 80%; /* Restrict width for a better fit */
+      height: auto;
+      border-radius: 10px;
+      margin-top: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
     }
   </style>
 </head>
@@ -141,14 +175,18 @@
 
   <!-- WHAT SECTION -->
   <section id="what">
-    <h2> Robot for detailing cars </h2>
+    <h2>Robot for Detailing Cars</h2>
     <div class="what-container">
       <div class="what-text">
-        <p><strong>Handy 1 (Ships August 2025):</strong> Vacuums, blows, and wipes car interiors. </p>
-        <p><strong>Handy 2 (Ships August 2026):</strong> Picks trash, shampoos, and extracts. </p>
-        <p> A cobot arm on a moving base. AI trained to detail cars. </p>
-        <p> Seats, mats, cupholders, crevices, dashboard, trunk, and more. </p>
-        <p> Works with existing vacuum hoses and cleaning tools. </p>
+        <!-- Updated wording (optional bullet points) -->
+        <p><strong>Handy 1 (Ships August 2025):</strong> Vacuums, blows, and wipes car interiors.</p>
+        <p><strong>Handy 2 (Ships August 2026):</strong> Picks up trash, shampoos, and extracts.</p>
+
+        <p> Handy is a cobot arm on a mobile base, with AI trained to detail cars.</p>
+        <p> Cleans seats, mats, cupholders, crevices, dashboard, trunk and more ! </p>
+        <p>
+          Works with your existing vacuum hoses and cleaning tools. Step up your detailing game without overhauling your current setup.
+        </p>
       </div>
       <div class="what-image">
         <img src="handy_car_wash.jpeg" alt="Handybot working in a car care center">
@@ -158,8 +196,11 @@
   
   <!-- ADDITIONAL IMAGE SECTION -->
   <section id="handy-inside" style="text-align: center;">
-    <img src="handy_car_wash3.jpeg" alt="Handybot inside the car cabin" style="max-width: 100%; border-radius: 10px; margin-top: 40px;" />
-    <p style="margin-top: 15px; font-style: italic;">Inside view: Handy can clean a car's interiors within 10 mins </p>
+    <!-- Reduced the width via the CSS above -->
+    <img src="handy_car_wash3.jpeg" alt="Handybot inside the car cabin" />
+    <p style="margin-top: 15px; font-style: italic;">
+      Inside view: Handy cleans a car's interior in about 10 minutes.
+    </p>
   </section>
   
 
@@ -200,7 +241,13 @@
   <!-- ABOUT US -->
   <section class="about">
     <h2>About Us</h2>
-    <p>We are a Robotics and AI team based in San Francisco, building a platform to train physical AI models to learn and perfect cleaning tasks (vacuum, wipe, blow, extract). Our end vision is a general-purpose cleaning robot for all environments. Starting with car cabin spaces, we aim to address the high-frequency tasks in the fleet and car wash industries with worker shortages.</p>
+    <p>
+      We are a Robotics and AI team based in San Francisco, building a platform
+      to train physical AI models for cleaning tasks (vacuum, wipe, blow, extract).
+      Our vision is a general-purpose cleaning robot for all environments.
+      Starting with car cabin spaces, we aim to address the high-frequency tasks
+      in fleet and car wash industries where labor is scarce.
+    </p>
   </section>
 
   <!-- FOOTER -->
