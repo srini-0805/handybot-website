@@ -5,7 +5,6 @@
   <title>Handy-bot.ai - The Future of Cleaning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* 1. GLOBAL STYLES */
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -40,7 +39,6 @@
       margin-top: 20px;
     }
 
-    /* 2. HERO SECTION */
     .hero {
       background: linear-gradient(45deg, #333, #6f32be);
       color: #fff;
@@ -57,9 +55,8 @@
       margin: 0 auto;
     }
 
-    /* 3. "WHAT" SECTION */
     #what {
-      text-align: center; /* Center the heading and overall content */
+      text-align: center;
     }
     #what h2 {
       font-size: 2rem;
@@ -70,31 +67,29 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      align-items: flex-start; /* Keeps text at top if image is taller */
-      justify-content: center; /* Centers the container */
+      align-items: flex-start;
+      justify-content: center;
       margin-top: 30px;
     }
     .what-text, .what-image {
       flex: 1;
       min-width: 280px;
-      max-width: 550px; /* Give a max width so the text doesn't stretch too far */
+      max-width: 550px;
     }
     .what-text {
-      text-align: left; /* Text is more readable left-aligned */
+      text-align: left;
     }
     .what-image img {
       max-width: 100%;
-      border-radius: 10px; /* Slight rounding for a smoother look */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* Additional text styling for bullet points (optional) */
     .feature-list ul {
       margin-top: 1em;
-      padding-left: 1.2em; /* Indent bullet points */
+      padding-left: 1.2em;
     }
 
-    /* 4. "WHO" SECTION (ICON GRID) */
     .icon-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -113,7 +108,6 @@
       background: #f0f0ff;
     }
 
-    /* 5. PRICING / PREBOOK */
     .pricing {
       background: #f9f9f9;
       text-align: center;
@@ -126,13 +120,11 @@
       margin-bottom: 0.5em;
     }
 
-    /* 6. ABOUT US */
     .about {
       background: #ffffff;
       padding: 60px 20px;
     }
 
-    /* 7. FOOTER */
     footer {
       background: #333;
       color: #fff;
@@ -144,24 +136,42 @@
       margin: 0 10px;
     }
 
-    /* MEDIA QUERIES for responsiveness */
     @media (max-width: 768px) {
       .what-container {
         flex-direction: column;
-        text-align: center; /* Everything centers nicely on smaller screens */
+        text-align: center;
       }
       .what-text {
         text-align: center;
       }
     }
 
-    /* --- Image in the "inside view" section: reduce max width --- */
-    #handy-inside img {
-      max-width: 80%; /* Restrict width for a better fit */
-      height: auto;
+    /* Carousel Section */
+    .carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+    }
+    .carousel-image {
+      display: none;
+      max-width: 100%;
       border-radius: 10px;
-      margin-top: 40px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .carousel-image.active {
+      display: block;
+    }
+    .carousel-controls {
+      margin-top: 10px;
+    }
+    .carousel-controls button {
+      background: #6f32be;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      border-radius: 4px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -178,59 +188,52 @@
     <h2>Robot for Detailing Cars</h2>
     <div class="what-container">
       <div class="what-text">
-        <!-- Updated wording (optional bullet points) -->
         <p><strong>Handy 1 (Ships June 2025):</strong> Vacuums, blows, and wipes car interiors.</p>
-        <p><strong>Handy 2 (Ships August 2026):</strong> Picks up trash, shampoos, and extracts.</p>
-
-        <p> Handy is a cobot arm on a mobile base, with AI trained to detail cars.</p>
-        <p> Cleans seats, mats, cupholders, crevices, dashboard, trunk and more ! </p>
-        <p>
-          Works with your existing vacuum hoses and cleaning tools. Step up your detailing game without overhauling your current setup.
-        </p>
+        <p><strong>Handy 2 (Ships June 2026):</strong> Shampoos, extracts and polishes.</p>
+        <p>Handy is a cobot arm on a mobile base, with AI trained to detail cars.</p>
+        <p>Cleans seats, mats, cupholders, crevices, dashboard, trunk and more!</p>
+        <p>Works with your existing vacuum hoses and cleaning tools. Step up your detailing game without overhauling your current setup.</p>
       </div>
       <div class="what-image">
         <img src="handy_car_wash.jpeg" alt="Handybot working in a car care center">
       </div>
     </div>
   </section>
-  
-  <!-- ADDITIONAL IMAGE SECTION -->
+
+  <!-- CAROUSEL / SLIDESHOW SECTION -->
   <section id="handy-inside" style="text-align: center;">
-    <!-- Reduced the width via the CSS above -->
-    <img src="handy_car_wash3.jpeg" alt="Handybot inside the car cabin" />
-    <p style="margin-top: 15px; font-style: italic;">
-      Inside view: Handy cleans a car's interior in about 10 minutes.
-    </p>
+    <h2>Inside View of Handy in Action</h2>
+    <div class="carousel">
+      <img class="carousel-image active" src="handy_car_wash3.jpeg" alt="Handybot inside car" />
+      <img class="carousel-image" src="handy_vacuum_seat1.jpeg" alt="Handybot vacuuming seats" />
+      <img class="carousel-image" src="handy_vacuum_seat2.jpeg" alt="Handybot vacuuming mats" />
+
+      <div class="carousel-controls">
+        <button onclick="prevImage()">←</button>
+        <button onclick="nextImage()">→</button>
+      </div>
+
+      <p style="margin-top: 15px; font-style: italic;">
+        Handy does an automated interior clean in 10 minutes — including seats, mats, cupholders and tight corners.
+      </p>
+    </div>
   </section>
-  
 
   <!-- WHO SECTION -->
   <section id="who">
     <h2>Who Should Hire a Handy?</h2>
     <p>Perfect for businesses dealing with large volumes of vehicle cleaning:</p>
     <div class="icon-grid">
-      <div class="icon-item">
-        <h4>Car Wash Centers</h4>
-      </div>
-      <div class="icon-item">
-        <h4>Car Rental Companies</h4>
-      </div>
-      <div class="icon-item">
-        <h4>Fleet Operators</h4>
-      </div>
-      <div class="icon-item">
-        <h4>Robotaxi Companies</h4>
-      </div>
-      <div class="icon-item">
-        <h4>Cleaning Contractors</h4>
-      </div>
-      <div class="icon-item">
-        <h4>EV Service Hubs</h4>
-      </div>
+      <div class="icon-item"><h4>Car Wash Centers</h4></div>
+      <div class="icon-item"><h4>Car Rental Companies</h4></div>
+      <div class="icon-item"><h4>Fleet Operators</h4></div>
+      <div class="icon-item"><h4>Robotaxi Companies</h4></div>
+      <div class="icon-item"><h4>Cleaning Contractors</h4></div>
+      <div class="icon-item"><h4>EV Service Hubs</h4></div>
     </div>
   </section>
 
-  <!-- PRICING & PREBOOK -->
+  <!-- PRICING -->
   <section class="pricing" id="prebook">
     <h2>Hire a Handybot</h2>
     <p><strong>$3000 per month</strong> – First bots shipping this August.</p>
@@ -259,5 +262,30 @@
       <a href="#">Terms</a>
     </p>
   </footer>
+
+  <!-- CAROUSEL SCRIPT -->
+  <script>
+    let current = 0;
+    const images = document.querySelectorAll('.carousel-image');
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }
+
+    function prevImage() {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+    }
+
+    // Auto-play every 5 seconds
+    setInterval(nextImage, 5000);
+  </script>
 </body>
 </html>
